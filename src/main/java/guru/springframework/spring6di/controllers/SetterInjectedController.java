@@ -2,6 +2,7 @@ package guru.springframework.spring6di.controllers;
 
 import guru.springframework.spring6di.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -10,15 +11,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class SetterInjectedController {
 
-    //so here I am doing without spring dependency injection
-    //either you can autowired property or setter
+
     private GreetingService greetingService;
 
-    //i want here my setter should be visible and inject it on the console and utilized.
+    //if you use setter method you should autowired method
+    @Qualifier("setterGreetingBean")
     @Autowired
     public void setGreetingService(GreetingService greetingService) {
-        System.out.println("I set greeting service");
-        this.greetingService = greetingService;
+        System.out.println("SetterInjectedController.setGreetingService");
     }
 
     public String sayHello(){

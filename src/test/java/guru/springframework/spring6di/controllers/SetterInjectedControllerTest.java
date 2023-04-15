@@ -14,14 +14,6 @@ class SetterInjectedControllerTest {
     @Autowired
     SetterInjectedController setterInjectedController;
 
-//    @BeforeEach
-//    void setUp() {
-//        //I initiate here.
-//        setterInjectedController = new SetterInjectedController();
-//        setterInjectedController.setGreetingService(new GreetingServiceImpl());
-//
-//    }
-
     @Test
     void sayHello() {
         System.out.println(setterInjectedController.sayHello());
