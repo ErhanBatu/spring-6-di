@@ -1,5 +1,7 @@
 package guru.springframework.spring6di.controllers;
 
+import guru.springframework.spring6di.services.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 //this controller will create a spring bean
