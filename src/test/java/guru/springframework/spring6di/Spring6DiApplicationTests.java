@@ -1,6 +1,7 @@
 package guru.springframework.spring6di;
 
-import guru.springframework.spring6di.controllers.MyController;
+
+import guru.springframework.spring6di.controllers.Mycontroller;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,21 +14,14 @@ class Spring6DiApplicationTests {
     @Autowired
     ApplicationContext applicationContext;
 
+    //you don't have to create an object for mycontroller
     @Autowired
-    MyController myController;
+    Mycontroller mycontroller;
 
     @Test
     void testAutowireOfController() {
-        System.out.println(myController.sayHello());
-    }
 
-    @Test
-    void testGetControllerFromCtx() {
-
-        //here i created my own instance, i didn't use autowire
-        MyController myController = applicationContext.getBean(MyController.class);
-
-        System.out.println(myController.sayHello());
+        System.out.println(mycontroller.sayHello());
     }
 
     @Test
