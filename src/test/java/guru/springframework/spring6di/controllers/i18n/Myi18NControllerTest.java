@@ -7,6 +7,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//if you deactivate activeprofiles annotation it will fail because there are 2 profiles. That's why you should give default profile
 @ActiveProfiles("ES")
 @SpringBootTest
 class Myi18NControllerTest {
